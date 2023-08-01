@@ -11,7 +11,6 @@
   align-items: center;
   position: relative;
   scroll-snap-align: center;
-
 }
 *::-webkit-scrollbar{
   display:none;
@@ -69,10 +68,39 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.15); /* Black background with opacity */
+  background-color: rgba(0,0,0,0.50); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 }
 
+.whiteOverlay {
+  position: relative; /* Sit on top of the page content */
+  display: flex; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #42382c9a; /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.inputLabel{
+  color:  var(--mantine-color-giantsjj-1);
+}
+
+.inputElement{
+  background-color: var(--mantine-color-giantsjj-1);
+  border-color: var(--mantine-color-giantsjj-6);
+  color:  var(--mantine-color-giantsjj-9);
+}
+.inputElement::placeholder{
+  color:var(--mantine-color-giantsjj-9) ;
+}
+.iconElement{
+  background-color: var(--mantine-color-giantsjj-1);
+
+}
 
 
 /* :root {
