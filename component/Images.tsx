@@ -1,9 +1,9 @@
 import { BackgroundImage, Grid, Container, Text, Image } from "@mantine/core";
 import { useImperativeHandle, forwardRef, useRef } from "react";
 import { Carousel } from "@mantine/carousel";
-import image1 from "../assets/bg1.jpg";
-import image2 from "../assets/bg2.jpg";
-import image3 from "../assets/bg3.jpg";
+import image1 from "@/public/bg1.jpg";
+import image2 from "@/public/bg2.jpg";
+import image3 from "@/public/bg3.jpg";
 
 const images = [image1, image2, image3];
 
@@ -58,7 +58,7 @@ const Images = forwardRef((props: sectionProp, ref) => {
               </Text>
             </Grid.Col>
             {/* Need to fix and resize for smaller */}
-            <Grid.Col
+            {/* <Grid.Col
               xl={12}
               style={{ minHeight: "600px" }}
             >
@@ -73,7 +73,7 @@ const Images = forwardRef((props: sectionProp, ref) => {
                   {slides}
                 </Carousel>
               </center>
-            </Grid.Col>
+            </Grid.Col> */}
           </Grid>
         </Container>
       </div>
@@ -84,7 +84,7 @@ const Images = forwardRef((props: sectionProp, ref) => {
         className="img"
         src={backgroundImage}
       />
-      <div className="overlay" />
+      {/* <div className="overlay" /> */}
     </div>
   );
 });
