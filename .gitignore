@@ -36,3 +36,6 @@ next-env.d.ts
 
 #wsl stuff
 *.Identifier
+
+#Stuff I dont want
+Demo.tsx

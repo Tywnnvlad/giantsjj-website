@@ -45,9 +45,9 @@ const ContactForm = () => {
     >
       <form
         onSubmit={form.onSubmit((values) => console.log(values))}
-        style={{
-          color: "giantsjj.1",
-        }}
+        // style={{
+        //   color: "giantsjj.1",
+        // }}
       >
         <TextInput
           withAsterisk

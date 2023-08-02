@@ -104,6 +104,11 @@
   color: var(--mantine-color-giantsjj-1);
 }
 
+.inputElement .error-message {
+  color: var(--mantine-color-giantsjj-1);
+
+}
+
 .inputElement {
   background-color: var(--mantine-color-giantsjj-1);
   border-color: var(--mantine-color-giantsjj-6);
