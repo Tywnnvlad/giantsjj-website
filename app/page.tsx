@@ -97,9 +97,9 @@ export default function Home() {
             ref={imagePage}
           />
           <ContactPage
-            backgroundImage="/bg6.jpg"
-            title="Contact Us"
-            ref={ContactPage}
+            backgroundImage={"/bg6.jpg"}
+            title={"Contact Us"}
+            ref={contactUsPage}
           />
 
           <div className="overlay" />

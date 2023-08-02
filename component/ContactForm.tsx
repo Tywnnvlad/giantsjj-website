@@ -10,13 +10,15 @@ import {
 import { useForm } from "@mantine/form";
 import { useState } from "react";
 
-const [name, setName] = useState("");
-const [email, setemail] = useState("");
-const [subject, setSubject] = useState("");
-const [comment, setComment] = useState("");
+// const [name, setName] = useState("");
+// const [email, setemail] = useState("");
+// const [subject, setSubject] = useState("");
+// const [comment, setComment] = useState("");
 
 const ContactForm = () => {
+
   const form = useForm({
+    validateInputOnBlur: true ,
     initialValues: {
       name: "",
       email: "",
@@ -31,15 +33,14 @@ const ContactForm = () => {
           ? "Your name must have atleast 2 letters right?"
           : null,
       email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
-      comment: (value) =>
-        value.length < 1 ? "What do you want to tell us?" : null,
-      termsOfService: () => true,
+      comment: (value) =>(value.length < 1 ? "What do you want to tell us?" : null),
+      // termsOfService: () => true,
     },
   });
 
   return (
     <Box
-      maw={300}
+      maw={350}
       mx="auto"
     >
       <form

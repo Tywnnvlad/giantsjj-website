@@ -61,7 +61,7 @@ const Welcome = forwardRef((props: sectionProp, ref) => {
 				className='img'
 				src={backgroundImage}
 			/>
-			<div className='overlay' />
+			{/* <div className='overlay' /> */}
 		</div>
 	);
 });

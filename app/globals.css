@@ -1,9 +1,9 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.section{
+.section {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -12,11 +12,12 @@
   position: relative;
   scroll-snap-align: center;
 }
-*::-webkit-scrollbar{
-  display:none;
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
-.img{
+.img {
   aspect-ratio: auto;
   position: absolute;
   object-fit: cover;
@@ -27,7 +28,8 @@
   z-index: 1;
 
 }
-.copy{
+
+.copy {
 
   width: 100%;
   height: 100vh;
@@ -48,7 +50,7 @@
 }
 
 
-.container{
+.container {
   position: relative;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -59,49 +61,80 @@
   scrollbar-width: none;
 
 }
+
 .overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: block; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed;
+  /* Sit on top of the page content */
+  display: block;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.50); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  background-color: rgba(0, 0, 0, 0.50);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
 }
 
 .whiteOverlay {
-  position: relative; /* Sit on top of the page content */
-  display: flex; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: relative;
+  /* Sit on top of the page content */
+  display: flex;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #42382c9a; /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  background-color: #42382c9a;
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
 }
 
-.inputLabel{
-  color:  var(--mantine-color-giantsjj-1);
+.inputLabel {
+  color: var(--mantine-color-giantsjj-1);
 }
 
-.inputElement{
+.inputElement {
   background-color: var(--mantine-color-giantsjj-1);
   border-color: var(--mantine-color-giantsjj-6);
-  color:  var(--mantine-color-giantsjj-9);
+  color: var(--mantine-color-giantsjj-9);
+
 }
-.inputElement::placeholder{
-  color:var(--mantine-color-giantsjj-9) ;
+
+.inputElement::placeholder {
+  color: var(--mantine-color-giantsjj-9);
+  background-color: var(--mantine-color-giantsjj-1);
 }
-.iconElement{
+
+.iconElement {
   background-color: var(--mantine-color-giantsjj-1);
 
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--mantine-color-giantsjj-1);
+  -webkit-text-fill-color: var(--mantine-color-giantsjj-1);
+  -webkit-box-shadow: 0 0 0px 1000px var(--mantine-color-giantsjj-6) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 /* :root {
   --max-width: 1100px;

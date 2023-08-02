@@ -9,6 +9,7 @@ import {
 } from "@mantine/core";
 import { useImperativeHandle, forwardRef, useRef } from "react";
 import ContactForm from "./ContactForm";
+import Demo from "./Demo";
 
 type sectionProp = {
   backgroundImage: string;
@@ -17,7 +18,7 @@ type sectionProp = {
 
 const ContactPage = forwardRef((props: sectionProp, ref) => {
   const { backgroundImage, title } = props;
-  const compRef = useRef();
+  const compRef = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => ({
     scrollIntoView: () => {
       compRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -42,6 +43,7 @@ const ContactPage = forwardRef((props: sectionProp, ref) => {
             </Grid.Col>
             <Grid.Col sm={12}>
               <ContactForm />
+              {/* <Demo /> */}
             </Grid.Col>
           </Grid>
         </Container>
