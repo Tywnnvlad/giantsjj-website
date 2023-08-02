@@ -10,6 +10,7 @@ import {
 import { useForm } from "@mantine/form";
 import { useState } from "react";
 
+import test from "@/app/api/sendgrid"
 // const [name, setName] = useState("");
 // const [email, setemail] = useState("");
 // const [subject, setSubject] = useState("");
@@ -27,6 +28,16 @@ const ContactForm = () => {
       termsOfService: false,
     },
 
+    transformValues: (values) => ({
+      ...values,
+    }),
+
+    //Still need to fix to send from api
+    // type Transformed = TransformedValues<typeof form>;
+    // // -> { name: string, locationId: number }
+  
+    // const handleSubmit = (values: TransformedValues<typeof form>) => {};
+
     validate: {
       name: (value) =>
         value.length < 2
@@ -36,6 +47,17 @@ const ContactForm = () => {
       comment: (value) =>(value.length < 1 ? "What do you want to tell us?" : null),
       // termsOfService: () => true,
     },
+  });
+
+  const res = await fetch("@/app/api/sendgrid",{
+    body: JSON.stringify({
+      email:form,
+
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST"
   });
 
   return (
