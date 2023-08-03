@@ -38,7 +38,7 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
 		} catch (error) {
 			return res
 				.status(500)
-				.json({ message: `Problem sending the message ${err}` });
+				.json({ message: `Problem sending the message ${error}` });
 		}
 	}
 }
