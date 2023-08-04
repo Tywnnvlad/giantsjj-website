@@ -23,16 +23,6 @@ const ContactForm = () => {
 			termsOfService: false,
 		},
 
-		// transformValues: (values) => ({
-		// 	...values,
-		// }),
-
-		//Still need to fix to send from api
-		// type Transformed = TransformedValues<typeof form>;
-		// // -> { name: string, locationId: number }
-
-		// const handleSubmit = (values: TransformedValues<typeof form>) => {};
-
 		//Validation
 		validate: {
 			name: (value) =>
@@ -42,6 +32,7 @@ const ContactForm = () => {
 			email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
 			comment: (value) =>
 				value.length < 1 ? 'What do you want to tell us?' : null,
+			subject: (value) => (value.length < 1 ? 'Please input a subjectx' : null),
 			// termsOfService: () => true,
 		},
 	});
@@ -59,56 +50,51 @@ const ContactForm = () => {
 	};
 
 	//Submit on valid
-	const handleSubmit = async (values: typeof form.values) => {
-		const res = await fetch('@/app/api/sendgrid', {
+	// const handleSubmit = async (values: typeof form.values) => {
+	// 	const res = await fetch('@/app/api/sendgrid', {
+	// 		body: JSON.stringify({
+	// 			name: form.getInputProps('name'),
+	// 			email: form.getInputProps('email'),
+	// 			subject: form.getInputProps('subject'),
+	// 			comment: form.getInputProps('comment'),
+	// 		}),
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 		method: 'POST',
+	// 	});
+	// };
+
+	//////////////////////////////////////////////////////////////////
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+
+		const res = await fetch('/api/sendgrid', {
 			body: JSON.stringify({
 				name: form.getInputProps('name'),
-				email: form.getInputProps('email'),
+				email: form.getInputProps('name'),
 				subject: form.getInputProps('subject'),
-				comment: form.getInputProps('comment'),
+				message: form.getInputProps('comment'),
 			}),
 			headers: {
 				'Content-Type': 'application/json',
 			},
 			method: 'POST',
 		});
+
+		const { error } = await res.json();
+		if (error) {
+			console.log(error);
+			return;
+		}
+		console.log(
+			form.getInputProps('name'),
+			form.getInputProps('name'),
+			form.getInputProps('subject'),
+			form.getInputProps('comment')
+		);
 	};
 
-	//////////////////////////////////////////////////////////////////
-	// const handleSubmit = async (e) => {
-	//   e.preventDefault();
-
-	//   let isValidForm = handleValidation();
-
-	//   if (isValidForm) {
-	//     setButtonText("Sending");
-	//     const res = await fetch("/api/sendgrid", {
-	//       body: JSON.stringify({
-	//         email: email,
-	//         fullname: fullname,
-	//         subject: subject,
-	//         message: message,
-	//       }),
-	//       headers: {
-	//         "Content-Type": "application/json",
-	//       },
-	//       method: "POST",
-	//     });
-
-	//     const { error } = await res.json();
-	//     if (error) {
-	//       console.log(error);
-	//       setShowSuccessMessage(false);
-	//       setShowFailureMessage(true);
-	//       setButtonText("Send");
-	//       return;
-	//     }
-	//     setShowSuccessMessage(true);
-	//     setShowFailureMessage(false);
-	//     setButtonText("Send");
-	//   }
-	//   console.log(fullname, email, subject, message);
-	// };
 	//////////////////////////////////////////////////////////////////
 
 	return (

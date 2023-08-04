@@ -16,17 +16,10 @@ interface emailstuff {
 
 async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
 	if (req.method === 'POST') {
-		// idk what this is for maybe body?
-		const {
-			name,
-			email,
-			message,
-		}: { name: string; email: string; message: string } = req.body;
-
 		// setting data
 		const data = {
 			to: 'gred_cal@yahoo.com',
-			from: 'gred_cal@yahoo.com',
+			from: 'giantsjiujitsu@proton.me',
 			subject: `${req.body.subject}`,
 			html: `<div>Hello World</div>`,
 		};
