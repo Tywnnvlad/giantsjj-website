@@ -9,6 +9,7 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
+import sendgrid from '@/app/api/sendgrid';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -69,7 +70,7 @@ const ContactForm = () => {
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 
-		const res = await fetch('/api/sendgrid', {
+		const res = await fetch('@/app/api/sendgrid', {
 			body: JSON.stringify({
 				name: form.getInputProps('name'),
 				email: form.getInputProps('name'),
