@@ -32,12 +32,6 @@ const Welcome = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 										width={'auto'}
 									/>
 								</center>
-								{/* <Text
-                size="2rem"
-                color="white"
-              >
-                {message}
-              </Text> */}
 							</Grid.Col>
 							<Grid.Col sm={12}>
 								<center>
