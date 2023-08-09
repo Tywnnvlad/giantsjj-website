@@ -9,9 +9,6 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import sendgrid from '@/app/api/sendgrid';
-import { useState } from 'react';
-import axios from 'axios';
 
 const ContactForm = () => {
 	const form = useForm({
@@ -67,7 +64,7 @@ const ContactForm = () => {
 	// };
 
 	//////////////////////////////////////////////////////////////////
-	const handleSubmit = async (e: Event) => {
+	const handleSubmit = async (e: any) => {
 		// e.preventDefault();
 		// e.stopPropagation();
 		console.log(e);

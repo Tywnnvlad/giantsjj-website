@@ -8,62 +8,64 @@ type sectionProp = {
 	message: string;
 };
 
-const Welcome = forwardRef((props: sectionProp, ref) => {
-	const { backgroundImage, image, title, message } = props;
-	const compRef = useRef();
-	useImperativeHandle(ref, () => ({
-		scrollIntoView: () => {
-			compRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		},
-	}));
-	return (
-		<div
-			className='section'
-			ref={compRef}>
-			<div className='copy'>
-				<Container size='lg'>
-					<Grid grow>
-						<Grid.Col sm={12}>
-							<center>
-								<Image
-									src={message}
-									height={'150px'}
-									width={'auto'}
-								/>
-							</center>
-							{/* <Text
+const Welcome = forwardRef<Partial<HTMLDivElement>, sectionProp>(
+	(props, ref) => {
+		const { backgroundImage, image, title, message } = props;
+		const compRef = useRef<HTMLDivElement>(null);
+		useImperativeHandle(ref, () => ({
+			scrollIntoView: () => {
+				compRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			},
+		}));
+		return (
+			<div
+				className='section'
+				ref={compRef}>
+				<div className='copy'>
+					<Container size='lg'>
+						<Grid grow>
+							<Grid.Col sm={12}>
+								<center>
+									<Image
+										src={message}
+										height={'150px'}
+										width={'auto'}
+									/>
+								</center>
+								{/* <Text
                 size="2rem"
                 color="white"
               >
                 {message}
               </Text> */}
-						</Grid.Col>
-						<Grid.Col sm={12}>
-							<center>
-								<Image
-									src={image}
-									height={'300px'}
-									width={'auto'}
-								/>
-							</center>
-						</Grid.Col>
-						<Grid.Col sm={12}>
-							<Text
-								size='2rem'
-								color='giantsjj.1'>
-								{title}
-							</Text>
-						</Grid.Col>
-					</Grid>
-				</Container>
+							</Grid.Col>
+							<Grid.Col sm={12}>
+								<center>
+									<Image
+										src={image}
+										height={'300px'}
+										width={'auto'}
+									/>
+								</center>
+							</Grid.Col>
+							<Grid.Col sm={12}>
+								<Text
+									size='2rem'
+									color='giantsjj.1'>
+									{title}
+								</Text>
+							</Grid.Col>
+						</Grid>
+					</Container>
+				</div>
+				<BackgroundImage
+					className='img'
+					src={backgroundImage}
+				/>
+				{/* <div className='overlay' /> */}
 			</div>
-			<BackgroundImage
-				className='img'
-				src={backgroundImage}
-			/>
-			{/* <div className='overlay' /> */}
-		</div>
-	);
-});
+		);
+	}
+);
 
 export default Welcome;
