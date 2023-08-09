@@ -67,16 +67,12 @@ const ContactForm = () => {
 	// };
 
 	//////////////////////////////////////////////////////////////////
-	const handleSubmit = async (e: any) => {
-		e.preventDefault();
-
-		const res = await fetch('@/app/api/sendgrid', {
-			body: JSON.stringify({
-				name: form.getInputProps('name'),
-				email: form.getInputProps('name'),
-				subject: form.getInputProps('subject'),
-				message: form.getInputProps('comment'),
-			}),
+	const handleSubmit = async (e: Event) => {
+		// e.preventDefault();
+		// e.stopPropagation();
+		console.log(e);
+		const res = await fetch('/api/sendgrid', {
+			body: JSON.stringify(e),
 			headers: {
 				'Content-Type': 'application/json',
 			},
@@ -88,12 +84,6 @@ const ContactForm = () => {
 			console.log(error);
 			return;
 		}
-		console.log(
-			form.getInputProps('name'),
-			form.getInputProps('name'),
-			form.getInputProps('subject'),
-			form.getInputProps('comment')
-		);
 	};
 
 	//////////////////////////////////////////////////////////////////
@@ -102,7 +92,7 @@ const ContactForm = () => {
 		<Box
 			maw={350}
 			mx='auto'>
-			<form onSubmit={form.onSubmit((values) => console.log(values))}>
+			<form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
 				<TextInput
 					withAsterisk
 					label='Name'
