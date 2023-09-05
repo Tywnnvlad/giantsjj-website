@@ -1,4 +1,5 @@
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 import {
 	AppShell,
 	Header,
@@ -10,11 +11,11 @@ import {
 	Button,
 	Image,
 	Center,
-} from '@mantine/core';
+} from "@mantine/core";
 
-import giantslogoandtitle from '../public/giantsjjlogoandtitle.png';
-import giantslogo from '../assets/giantslogo.png';
-import giantstitle from '../assets/giantstitle.png';
+import giantslogoandtitle from "../public/giantsjjlogoandtitle.png";
+import giantslogo from "../assets/giantslogo.png";
+import giantstitle from "../assets/giantstitle.png";
 
 type sectionProp = {
 	logo: string;
@@ -78,7 +79,7 @@ const Head = ({
 				main: {
 					//background on dark and light mode
 					background:
-						theme.colorScheme === 'dark'
+						theme.colorScheme === "dark"
 							? theme.colors.giantsjj[2]
 							: theme.colors.giantsjj[6],
 				},
@@ -88,23 +89,23 @@ const Head = ({
 					height={{ base: 50, md: 60 }}
 					p='md'
 					style={{
-						background: '#42382C',
-						border: '0px',
-						opacity: '0.8',
+						background: "#42382C",
+						border: "0px",
+						opacity: "0.8",
 					}}>
 					<div
 						style={{
 							margin: 0,
 							padding: 0,
-							display: 'flex',
-							alignItems: 'center',
-							height: '100%',
-							justifyContent: 'space-between',
+							display: "flex",
+							alignItems: "center",
+							height: "100%",
+							justifyContent: "space-between",
 						}}>
 						{/* When small */}
 						<MediaQuery
 							largerThan='sm'
-							styles={{ display: 'none' }}>
+							styles={{ display: "none" }}>
 							<Burger
 								opened={opened}
 								onClick={() => setOpened((o) => !o)}
@@ -118,7 +119,7 @@ const Head = ({
 						<MediaQuery
 							largerThan='xs'
 							styles={{
-								display: 'none',
+								display: "none",
 							}}>
 							<SimpleGrid
 								cols={2}
@@ -130,7 +131,7 @@ const Head = ({
 								<Center>
 									<Image
 										src={logo}
-										maw={'9rem'}
+										maw={"9rem"}
 									/>
 								</Center>
 
@@ -149,19 +150,19 @@ const Head = ({
 
 						<MediaQuery
 							smallerThan='xs'
-							styles={{ display: 'none' }}>
+							styles={{ display: "none" }}>
 							<SimpleGrid
 								onClick={scrolltoWelcome}
 								cols={2}
 								spacing={3}
 								style={{
-									alignItems: 'center',
-									justifyItems: 'end',
-									cursor: 'pointer',
+									alignItems: "center",
+									justifyItems: "end",
+									cursor: "pointer",
 								}}>
 								<Image
 									src={logo}
-									maw={'12rem'}
+									maw={"12rem"}
 								/>
 								{/* <Image
 									src={giantslogo}
@@ -179,7 +180,7 @@ const Head = ({
 						{/* When big */}
 						<MediaQuery
 							smallerThan='sm'
-							styles={{ display: 'none' }}>
+							styles={{ display: "none" }}>
 							<SimpleGrid
 								className='headerButton'
 								cols={6}>

@@ -1,6 +1,6 @@
-'use client';
-import { BackgroundImage, Grid, Container, Text, Image } from '@mantine/core';
-import { useImperativeHandle, forwardRef, useRef } from 'react';
+"use client";
+import { BackgroundImage, Grid, Container, Text, Image } from "@mantine/core";
+import { useImperativeHandle, forwardRef, useRef } from "react";
 
 type sectionProp = {
 	backgroundImage: string;
@@ -16,7 +16,7 @@ const Welcome = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 		const compRef = useRef<HTMLDivElement>(null);
 		useImperativeHandle(ref, () => ({
 			scrollIntoView: () => {
-				compRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				compRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 			},
 		}));
 		return (
@@ -30,8 +30,8 @@ const Welcome = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 								<center>
 									<Image
 										src={message}
-										height={'150px'}
-										width={'auto'}
+										height={"150px"}
+										width={"auto"}
 									/>
 								</center>
 							</Grid.Col>
@@ -39,8 +39,8 @@ const Welcome = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 								<center>
 									<Image
 										src={image}
-										height={'300px'}
-										width={'auto'}
+										height={"300px"}
+										width={"auto"}
 									/>
 								</center>
 							</Grid.Col>

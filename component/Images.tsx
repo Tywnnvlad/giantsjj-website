@@ -1,10 +1,10 @@
-'use client';
-import { BackgroundImage, Grid, Container, Text, Image } from '@mantine/core';
-import { useImperativeHandle, forwardRef, useRef } from 'react';
-import { Carousel } from '@mantine/carousel';
-import image1 from '@/public/bg1.jpg';
-import image2 from '@/public/bg2.jpg';
-import image3 from '@/public/bg3.jpg';
+"use client";
+import { BackgroundImage, Grid, Container, Text, Image } from "@mantine/core";
+import { useImperativeHandle, forwardRef, useRef } from "react";
+import { Carousel } from "@mantine/carousel";
+import image1 from "@/public/bg1.jpg";
+import image2 from "@/public/bg2.jpg";
+import image3 from "@/public/bg3.jpg";
 
 const images = [image1, image2, image3];
 
@@ -27,7 +27,7 @@ const Images = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 		const compRef = useRef<HTMLDivElement>(null);
 		useImperativeHandle(ref, () => ({
 			scrollIntoView: () => {
-				compRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				compRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 			},
 		}));
 		return (
@@ -39,7 +39,7 @@ const Images = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 						<Grid
 							grow
 							style={{
-								color: 'giantsjj.1',
+								color: "giantsjj.1",
 							}}>
 							<Grid.Col sm={12}>
 								<Text
