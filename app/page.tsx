@@ -44,7 +44,7 @@ export default function Home() {
 							'#42382C',
 							'#322E2A',
 							'#1B1816',
-							'#000000',
+							'#1B1816',
 						],
 					},
 					primaryColor: 'giantsjj',
