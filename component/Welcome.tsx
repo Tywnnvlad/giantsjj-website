@@ -1,3 +1,4 @@
+'use client';
 import { BackgroundImage, Grid, Container, Text, Image } from '@mantine/core';
 import { useImperativeHandle, forwardRef, useRef } from 'react';
 
