@@ -114,7 +114,7 @@ const ContactForm = () => {
 				<Textarea
 					withAsterisk
 					label='Comment'
-					placeholder='I like Giants JJ'
+					placeholder='Comment'
 					{...form.getInputProps('comment')}
 					autosize
 					minRows={2}
@@ -124,7 +124,7 @@ const ContactForm = () => {
 
 				<Checkbox
 					mt='md'
-					label='I agree to sell my privacy'
+					label='I agree to give my information to Giants Jiu-Jitsu'
 					{...form.getInputProps('termsOfService', { type: 'checkbox' })}
 					classNames={{ label: 'inputLabel', input: 'iconElement' }}
 				/>

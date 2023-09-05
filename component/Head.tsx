@@ -27,6 +27,7 @@ const Head = ({
 	refToLocationPage,
 	refToImagePage,
 	refToContactUsPage,
+	refToRulePage,
 	logo,
 }) => {
 	const theme = useMantineTheme();
@@ -63,6 +64,11 @@ const Head = ({
 	const scrolltoContactUs = () => {
 		if (refToContactUsPage.current) {
 			refToContactUsPage.current.scrollIntoView();
+		}
+	};
+	const scrolltoRule = () => {
+		if (refToRulePage.current) {
+			refToRulePage.current.scrollIntoView();
 		}
 	};
 
@@ -176,11 +182,12 @@ const Head = ({
 							styles={{ display: 'none' }}>
 							<SimpleGrid
 								className='headerButton'
-								cols={5}>
+								cols={6}>
 								<Button onClick={scrolltoAbout}>About Us</Button>
 								<Button onClick={scrolltoSchedule}>Schedule</Button>
 								<Button onClick={scrolltoLocation}>Location</Button>
 								<Button onClick={scrolltoImage}>Image</Button>
+								<Button onClick={scrolltoRule}>Rules</Button>
 								<Button onClick={scrolltoContactUs}>Contact Us</Button>
 							</SimpleGrid>
 						</MediaQuery>

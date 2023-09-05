@@ -48,13 +48,13 @@ const Images = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 									{title}
 								</Text>
 							</Grid.Col>
-							<Grid.Col sm={12}>
+							{/* <Grid.Col sm={12}>
 								<Text
 									size='1.5rem'
 									color='giantsjj.1'>
 									{message}
 								</Text>
-							</Grid.Col>
+							</Grid.Col> */}
 							{/* Need to fix and resize for smaller */}
 							{/* <Grid.Col
               xl={12}

@@ -81,24 +81,7 @@
   /* Specify a stack order in case you're using a different order for other elements */
 }
 
-.whiteOverlay {
-  position: relative;
-  /* Sit on top of the page content */
-  display: flex;
-  /* Hidden by default */
-  width: 100%;
-  /* Full width (cover the whole page) */
-  height: 100%;
-  /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #42382c9a;
-  /* Black background with opacity */
-  z-index: 2;
-  /* Specify a stack order in case you're using a different order for other elements */
-}
+
 
 .inputLabel {
   color: var(--mantine-color-giantsjj-1);
@@ -117,7 +100,7 @@
 }
 
 .inputElement::placeholder {
-  color: var(--mantine-color-giantsjj-9);
+  color: var(--mantine-color-giantsjj-4);
   background-color: var(--mantine-color-giantsjj-1);
 }
 
@@ -140,6 +123,58 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px var(--mantine-color-giantsjj-6) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+.whiteOverlay {
+  position: relative;
+  /* Sit on top of the page content */
+  display: flex;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #42382c9a;
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+}
+.ruleTab{
+  background-color: #42382c9a;
+  color: var(--mantine-color-giantsjj-1);
+  font-size: 1rem;  
+  width: 900px;
+}
+.ruleTab.Tab{
+  color: var(--mantine-color-giantsjj-9);
+ 
+}
+.tabText{
+  text-align: left;
+  color: var(--mantine-color-giantsjj-1);
+  white-space: pre-wrap;
+}
+.membershipText{
+  font-size: 1.2rem;  
+  text-align: left;
+  color: var(--mantine-color-giantsjj-1);
+  white-space: pre-wrap;
+}
+.tabList{
+  font-size: 1.2rem;  
+  text-align: left;
+  color: var(--mantine-color-giantsjj-1);
+}
+.tabList Tab:active{
+  color: var(--mantine-color-giantsjj-7);
+}
+/* .ruleList{
+  background-color: #42382c9a;
+  color: var(--mantine-color-giantsjj-1);
+} */
 
 /* :root {
   --max-width: 1100px;

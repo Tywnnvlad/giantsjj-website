@@ -15,6 +15,7 @@ import Images from '@/component/Images';
 import Aboutus from '@/component/Aboutus';
 import Schedule from '@/component/Schedule';
 import ContactPage from '@/component/ContactPage';
+import Rules from '@/component/Rules';
 
 export default function Home() {
 	const welcomePage = useRef(null);
@@ -23,6 +24,7 @@ export default function Home() {
 	const locationPage = useRef(null);
 	const imagePage = useRef(null);
 	const contactUsPage = useRef(null);
+	const rulePage = useRef(null);
 
 	return (
 		<>
@@ -55,6 +57,7 @@ export default function Home() {
 						refToLocationPage={locationPage}
 						refToImagePage={imagePage}
 						refToContactUsPage={contactUsPage}
+						refToRulePage={rulePage}
 						logo={'/giantsjjlogoandtitle.png'}
 					/>
 					<Welcome
@@ -62,6 +65,7 @@ export default function Home() {
 						title={'BE DANGEROUS'}
 						message={'/giantstitle.png'}
 						image={'/rotatinggiant.gif'}
+						message2={'Sign up on January 2024 to get a free t-shirt!'}
 						ref={welcomePage}
 					/>
 					<Aboutus
@@ -78,7 +82,10 @@ export default function Home() {
 						backgroundImage={'/bg3.jpg'}
 						schedule={'/current_schedule.png'}
 						title={'Schedule'}
-						message={'Does not include holidays.'}
+						message={' Does not include holidays.'}
+						message2={
+							'Fundamentals is the beginners-level class and is preferred during your first 6 months of training. However, everyone is also welcome to the All Levels class.'
+						}
 						ref={schedulePage}
 					/>
 					<Location
@@ -94,6 +101,11 @@ export default function Home() {
 						message={'Snippets from our dojo.'}
 						img={''}
 						ref={imagePage}
+					/>
+					<Rules
+						title='Title'
+						backgroundImage={'/bg7.jpg'}
+						ref={rulePage}
 					/>
 					<ContactPage
 						backgroundImage={'/bg6.jpg'}
