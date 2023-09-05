@@ -18,16 +18,29 @@ import giantslogoandtitle from "../public/giantsjjlogoandtitle.png";
 import giantslogo from "../assets/giantslogo.png";
 import giantstitle from "../assets/giantstitle.png";
 
-const Head = ({
-	refToWelcomePage,
-	refToAboutUsPage,
-	refToSchedulePage,
-	refToLocationPage,
-	refToImagePage,
-	refToContactUsPage,
-	refToRulePage,
-	logo,
-}) => {
+// Fix typing
+type refProps = {
+	refToWelcomePage: any;
+	refToAboutUsPage: any;
+	refToSchedulePage: any;
+	refToLocationPage: any;
+	refToImagePage: any;
+	refToContactUsPage: any;
+	refToRulePage: any;
+	logo: string;
+};
+
+const Head = (props: refProps) => {
+	const {
+		refToWelcomePage,
+		refToAboutUsPage,
+		refToSchedulePage,
+		refToLocationPage,
+		refToImagePage,
+		refToContactUsPage,
+		refToRulePage,
+		logo,
+	} = props;
 	const theme = useMantineTheme();
 
 	const [opened, setOpened] = useState(false);

@@ -1,6 +1,13 @@
 "use client";
 
-import { BackgroundImage, Grid, Container, Text, Image } from "@mantine/core";
+import {
+	BackgroundImage,
+	Grid,
+	Container,
+	Text,
+	Image,
+	Center,
+} from "@mantine/core";
 import { useImperativeHandle, forwardRef, useRef } from "react";
 import { Carousel } from "@mantine/carousel";
 import image1 from "@/public/bg1.jpg";
@@ -16,11 +23,11 @@ type sectionProp = {
 	message: string;
 };
 
-const slides = images.map((url) => (
-	<Carousel.Slide key={url}>
-		<Image src={url} />
-	</Carousel.Slide>
-));
+// const slides = images.map((url) => (
+// 	<Carousel.Slide key={url}>
+// 		<Image src={url} />
+// 	</Carousel.Slide>
+// ));
 
 const Images = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 	(props, ref) => {
@@ -48,7 +55,12 @@ const Images = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 									color='giantsjj.1'>
 									{title}
 								</Text>
+								<Image
+									src={"/placeholder.png"}
+									width={"400px"}
+								/>
 							</Grid.Col>
+
 							{/* <Grid.Col sm={12}>
 								<Text
 									size='1.5rem'
