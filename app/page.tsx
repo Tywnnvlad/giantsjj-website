@@ -64,7 +64,8 @@ export default function Home() {
 						title={"BE DANGEROUS"}
 						message={"/giantstitle.png"}
 						image={"/rotatinggiant.gif"}
-						message2={"Sign up on January 2024 to get a free t-shirt!"}
+						message2={"January 1st Opening Day"}
+						message3={"Sign up in the month of January to get a free t-shirt!"}
 						ref={welcomePage}
 					/>
 					<Aboutus

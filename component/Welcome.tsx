@@ -9,11 +9,13 @@ type sectionProp = {
 	title: string;
 	message: string;
 	message2: string;
+	message3: string;
 };
 
 const Welcome = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 	(props, ref) => {
-		const { backgroundImage, image, title, message, message2 } = props;
+		const { backgroundImage, image, title, message, message2, message3 } =
+			props;
 		const compRef = useRef<HTMLDivElement>(null);
 		useImperativeHandle(ref, () => ({
 			scrollIntoView: () => {
@@ -57,6 +59,13 @@ const Welcome = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 									size='1.5rem'
 									color='giantsjj.0'>
 									{message2}
+								</Text>
+							</Grid.Col>
+							<Grid.Col sm={12}>
+								<Text
+									size='1.5rem'
+									color='giantsjj.0'>
+									{message3}
 								</Text>
 							</Grid.Col>
 						</Grid>

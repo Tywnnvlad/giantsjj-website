@@ -198,7 +198,7 @@ const Head = (props: refProps) => {
 								<Button onClick={scrolltoSchedule}>Schedule</Button>
 								<Button onClick={scrolltoLocation}>Location</Button>
 								<Button onClick={scrolltoImage}>Image</Button>
-								<Button onClick={scrolltoRule}>Rules</Button>
+								<Button onClick={scrolltoRule}>Membership</Button>
 								<Button onClick={scrolltoContactUs}>Contact Us</Button>
 							</SimpleGrid>
 						</MediaQuery>

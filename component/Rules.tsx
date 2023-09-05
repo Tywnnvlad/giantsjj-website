@@ -89,7 +89,7 @@ const Rules = forwardRef<Partial<HTMLDivElement>, sectionProp>((props, ref) => {
 											“rolling.” After class, we will leave the mats open for
 											10-15 minutes to allow for stretching and additional
 											rounds. Rolling on your first few classes is optional, but
-											encouraged {"\n"}
+											encouraged. {"\n"}
 										</Text>
 										<Text className='tabText'>
 											Here is an additional (optional) resource to help you to
@@ -165,10 +165,6 @@ const Rules = forwardRef<Partial<HTMLDivElement>, sectionProp>((props, ref) => {
 												<List.Item>
 													Single digit manipulation (grabbing single toes and
 													fingers)
-												</List.Item>
-												<List.Item>
-													{" "}
-													<List.Item>Scissor leg takedown</List.Item>
 												</List.Item>
 												<List.Item>Hair pulling</List.Item>
 												<List.Item>
