@@ -1,5 +1,6 @@
 # URL
 The live website can be found here: 
+[https://www.giantsjiujitsu.ca/](https://www.giantsjiujitsu.ca/)
 # Giants Jiu Jitsu website
 This Website is made using NextJS, ReactJS, Typescript and MantineUI
 
