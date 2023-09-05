@@ -1,13 +1,13 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Head from 'next/head';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: 'Giants Jiu Jitsu',
-	description: 'Giant Jiu Jitsu',
+	title: "Giants Jiu Jitsu",
+	description: "Giant Jiu Jitsu",
 };
 
 export default function RootLayout({

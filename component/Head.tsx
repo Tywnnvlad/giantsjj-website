@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import {
 	AppShell,
@@ -16,10 +17,6 @@ import {
 import giantslogoandtitle from "../public/giantsjjlogoandtitle.png";
 import giantslogo from "../assets/giantslogo.png";
 import giantstitle from "../assets/giantstitle.png";
-
-type sectionProp = {
-	logo: string;
-};
 
 const Head = ({
 	refToWelcomePage,

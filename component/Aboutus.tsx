@@ -21,21 +21,6 @@ type sectionProp = {
 	about2: string;
 };
 
-// type smallText = {
-//   text: string;
-// };
-
-// const smallText = (props: smallText) => {
-//   return (
-//     <Text
-//       size="2rem"
-//       color="giantsjj.1"
-//     >
-//       {smallText}
-//     </Text>
-//   );
-// };
-
 const Aboutus = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 	(props, ref) => {
 		const { backgroundImage, title, message, pic1, pic2, about1, about2 } =

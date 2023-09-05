@@ -1,10 +1,9 @@
 "use client";
+
 import { useRef } from "react";
 import Image from "next/image";
-
 import styles from "./page.module.css";
 import { MantineProvider, Text, Button } from "@mantine/core";
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
