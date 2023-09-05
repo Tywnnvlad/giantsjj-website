@@ -1,8 +1,10 @@
-import sendgrid from '@sendgrid/mail';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { stringify } from 'querystring';
+import sendgrid from "@sendgrid/mail";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { stringify } from "querystring";
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+let SENDGRID_API_KEY: any = process.env.SENDGRID_API_KEY;
+
+sendgrid.setApiKey(SENDGRID_API_KEY);
 
 type Data = {
 	message: string;
@@ -15,14 +17,14 @@ interface emailstuff {
 }
 
 async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
-	if (req.method === 'GET') {
+	if (req.method === "GET") {
 		return res.status(200);
 	}
-	if (req.method === 'POST') {
+	if (req.method === "POST") {
 		// setting data
 		const data = {
-			to: 'gred_cal@yahoo.com',
-			from: 'giantsjiujitsu@proton.me',
+			to: "gred_cal@yahoo.com",
+			from: "giantsjiujitsu@proton.me",
 			subject: `${req.body.subject}`,
 			html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
@@ -55,8 +57,8 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
 
 		try {
 			await sendgrid.send(data);
-			res.status(200).json({ message: 'Message has been sent succesfully' });
-			console.log('msg sent lmao');
+			res.status(200).json({ message: "Message has been sent succesfully" });
+			console.log("msg sent lmao");
 		} catch (error) {
 			return res
 				.status(500)
