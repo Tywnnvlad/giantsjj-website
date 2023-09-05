@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
 	BackgroundImage,
@@ -11,8 +11,8 @@ import {
 	Tabs,
 	List,
 	Anchor,
-} from '@mantine/core';
-import { useImperativeHandle, forwardRef, useRef } from 'react';
+} from "@mantine/core";
+import { useImperativeHandle, forwardRef, useRef } from "react";
 
 type sectionProp = {
 	backgroundImage: string;
@@ -24,7 +24,7 @@ const Rules = forwardRef<Partial<HTMLDivElement>, sectionProp>((props, ref) => {
 	const compRef = useRef<HTMLDivElement>(null);
 	useImperativeHandle(ref, () => ({
 		scrollIntoView: () => {
-			compRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			compRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 		},
 	}));
 
@@ -89,11 +89,11 @@ const Rules = forwardRef<Partial<HTMLDivElement>, sectionProp>((props, ref) => {
 											“rolling.” After class, we will leave the mats open for
 											10-15 minutes to allow for stretching and additional
 											rounds. Rolling on your first few classes is optional, but
-											encouraged {'\n'}
+											encouraged {"\n"}
 										</Text>
 										<Text className='tabText'>
 											Here is an additional (optional) resource to help you to
-											prepare for your first class:{' '}
+											prepare for your first class:{" "}
 											<Anchor
 												href='https://diazcombatsports.com/2020/01/the-basic-positions-submissions-used-in-brazilian-jiu-jitsu
 												'
@@ -167,7 +167,7 @@ const Rules = forwardRef<Partial<HTMLDivElement>, sectionProp>((props, ref) => {
 													fingers)
 												</List.Item>
 												<List.Item>
-													{' '}
+													{" "}
 													<List.Item>Scissor leg takedown</List.Item>
 												</List.Item>
 												<List.Item>Hair pulling</List.Item>

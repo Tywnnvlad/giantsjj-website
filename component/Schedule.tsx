@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
 	BackgroundImage,
@@ -7,8 +7,8 @@ import {
 	Text,
 	Image,
 	Center,
-} from '@mantine/core';
-import { useImperativeHandle, forwardRef, useRef } from 'react';
+} from "@mantine/core";
+import { useImperativeHandle, forwardRef, useRef } from "react";
 
 type sectionProp = {
 	backgroundImage: string;
@@ -24,7 +24,7 @@ const Schedule = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 		const compRef = useRef<HTMLDivElement>(null);
 		useImperativeHandle(ref, () => ({
 			scrollIntoView: () => {
-				compRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				compRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 			},
 		}));
 		return (
@@ -53,8 +53,8 @@ const Schedule = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 									<div className='whiteOverlay'>
 										<Image
 											src={schedule}
-											width={'20 rem'}
-											radius={'md'}
+											width={"20 rem"}
+											radius={"md"}
 										/>
 									</div>
 								</Center>

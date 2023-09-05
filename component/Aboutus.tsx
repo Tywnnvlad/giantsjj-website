@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
 	BackgroundImage,
@@ -8,8 +8,8 @@ import {
 	Image,
 	SimpleGrid,
 	Center,
-} from '@mantine/core';
-import { useImperativeHandle, forwardRef, useRef } from 'react';
+} from "@mantine/core";
+import { useImperativeHandle, forwardRef, useRef } from "react";
 
 type sectionProp = {
 	backgroundImage: string;
@@ -43,7 +43,7 @@ const Aboutus = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 		const compRef = useRef<HTMLDivElement>(null);
 		useImperativeHandle(ref, () => ({
 			scrollIntoView: () => {
-				compRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				compRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 			},
 		}));
 		return (
@@ -77,9 +77,9 @@ const Aboutus = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 									<Center>
 										<Image
 											src={pic1}
-											width={'20rem'}
-											height={'20rem'}
-											radius={'md'}
+											width={"20rem"}
+											height={"20rem"}
+											radius={"md"}
 											withPlaceholder
 										/>
 									</Center>
@@ -99,9 +99,9 @@ const Aboutus = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 									<Center>
 										<Image
 											src={pic2}
-											width={'20rem'}
-											height={'20rem'}
-											radius={'md'}
+											width={"20rem"}
+											height={"20rem"}
+											radius={"md"}
 											withPlaceholder
 										/>
 									</Center>

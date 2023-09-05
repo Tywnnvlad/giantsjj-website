@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
 	BackgroundImage,
@@ -8,9 +8,9 @@ import {
 	Image,
 	SimpleGrid,
 	Center,
-} from '@mantine/core';
-import { useImperativeHandle, forwardRef, useRef } from 'react';
-import ContactForm from './ContactForm';
+} from "@mantine/core";
+import { useImperativeHandle, forwardRef, useRef } from "react";
+import ContactForm from "./ContactForm";
 
 type sectionProp = {
 	backgroundImage: string;
@@ -23,7 +23,7 @@ const ContactPage = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 		const compRef = useRef<HTMLDivElement>(null);
 		useImperativeHandle(ref, () => ({
 			scrollIntoView: () => {
-				compRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				compRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 			},
 		}));
 		return (
@@ -34,7 +34,7 @@ const ContactPage = forwardRef<Partial<HTMLDivElement>, sectionProp>(
 					<Container size='md'>
 						<Grid>
 							<Grid.Col sm={12}>
-								{' '}
+								{" "}
 								<Text
 									size='2rem'
 									color='giantsjj.1'>
