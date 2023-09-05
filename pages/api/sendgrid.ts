@@ -23,7 +23,7 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
 	if (req.method === "POST") {
 		// setting data
 		const data = {
-			to: "gred_cal@yahoo.com",
+			to: "giantsjiujitsu@proton.me",
 			from: "giantsjiujitsu@proton.me",
 			subject: `${req.body.subject}`,
 			html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
